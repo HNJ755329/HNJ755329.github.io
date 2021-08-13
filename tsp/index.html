@@ -2,12 +2,38 @@
 <html>
 
 <head>
-    <title>This is the title of the webpage!</title>
+    <title>TSP</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
-    <canvas id="tsp-canvas" width="640", height="320"></canvas>
+    <h1>
+        巡回セールスマン問題．
+    </h1>
+    <div class="info">
+        <div>
+            number:
+            <input type="text" id="number" value="30" maxlength="6" />
+            <input type="button" value="random" onclick="clickNumber()" />
+        </div>
+        <div id="epoch"></div>
+        <div id="cost"></div>
+        <div id="best"></div>
+        <div id="action"></div>
+
+        <div id="play" class="btn btn-success">PLAY</div>
+        <div id="stop" class="btn btn-danger">STOP</div>
+        <div id="best" class="btn btn-warning">BEST</div>
+
+    </div>
+    <h2>TSP</h2>
+    <canvas id="tsp-canvas" width="640" , height="320"></canvas>
+    <h2>BEST</h2>
+    <canvas id="tsp-canvas-best" width="640" , height="320"></canvas>
+
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script> -->
 <script src="js/tsp.js"></script>
+
 </html>
