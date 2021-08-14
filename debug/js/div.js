@@ -1,0 +1,1 @@
+for(let elem of document.getElementsByTagName('div')){elem.style.border = 'solid';console.log(elem);};
