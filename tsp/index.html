@@ -5,32 +5,58 @@
     <title>TSP</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <h1>
-        巡回セールスマン問題．
-    </h1>
-    <div class="info">
-        <div>
-            number:
-            <input type="text" id="number" value="100" maxlength="6" />
-            <input type="button" value="random" onclick="clickNumber()" />
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <h1>
+                <a class="navbar-brand" href="#">巡回セールスマン問題</a>
+            </h1>
         </div>
-        <div id="epoch"></div>
-        <div id="cost"></div>
-        <div id="best"></div>
-        <div id="action"></div>
+    </nav>
+    <div id="main-container" class="container" style="padding-top:150px;">
+        <div id="contest-nav-tabs" class="col-sm-12 mb-2 cnvtb-fixed">
+            <div>
+                <div class="form-group">
+                    <label for="input" class="control-label col-sm-2">#nodes:</label>
+                    <input type="text" id="number" value="100" maxlength="6" />
+                    <input type="button" value="random" onclick="clickNumber()" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="epoch"></div>
+                <div id="cost"></div>
+                <div id="best"></div>
+                <div id="action"></div>
+                <a id="play" class="btn btn-success" onclick="_play()">PLAY</a>
+                <a id="stop" class="btn btn-danger" onclick="_stop()">STOP</a>
+            </div>
+        </div>
 
-        <div id="play" class="btn btn-success">PLAY</div>
-        <div id="stop" class="btn btn-danger">STOP</div>
-        <!-- <div id="best" class="btn btn-warning">BEST</div> -->
+        <div class="form-group">
+            <label for="input" class="control-label col-sm-2">input:</label>
+            <textarea id="input" name="input" class="form-control customtest-textarea" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <a class="btn btn-primary">INPUT</a>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="output" class="control-label col-sm-2">output:</label>
+            <textarea id="output" rows="5" readonly="readonly" class="form-control customtest-textarea"></textarea>
+        </div>
+        <h2>TSP</h2>
+        <div class="canvas-wrapper">
+            <canvas id="tsp-canvas"></canvas>
+        </div>
+        <h2>BEST</h2>
+        <div class="canvas-wrapper">
+            <canvas id="tsp-canvas-best"></canvas>
+        </div>
 
     </div>
-    <h2>TSP</h2>
-    <canvas id="tsp-canvas" width="640" , height="320"></canvas>
-    <h2>BEST</h2>
-    <canvas id="tsp-canvas-best" width="640" , height="320"></canvas>
 
 </body>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script> -->
