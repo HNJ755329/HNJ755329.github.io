@@ -297,3 +297,33 @@ function resize() {
     draw_tsp(p, ctx);
     draw_tsp(p_best, ctx_best, '#0000FF');
 }
+
+class TSP {
+    // init
+
+    // Modec
+    
+    // View
+    draw_tsp() {
+
+    }
+    // Controll
+    creat() {
+
+    }
+    read() {
+
+    }
+    update() {
+
+    }
+    delete() {
+
+    }
+    play() {
+
+    }
+    stop() {
+
+    }
+}
