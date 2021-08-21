@@ -28,11 +28,11 @@
     <script>
         let src = [];
         src.push("working area->staging: git add");
-        src.push("working area-->staging: git diff");
-        src.push("staging->working area: git reset");
+        src.push("Note over working area,staging: git diff");
+        src.push("staging-->>working area: git reset");
         src.push("staging->commit: git commit");
-        src.push("staging-->commit: git diff --staged");
-        src.push("commit->working area: git checkout SHA1/tag/branch");
+        src.push("Note over staging,commit: git diff --staged");
+        src.push("commit-->>working area: git checkout SHA1/tag/branch");
         let diagram = Diagram.parse(src.join('\n'));
         diagram.drawSVG("git_add", { theme: 'simple' });
     </script>
