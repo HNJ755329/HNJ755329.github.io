@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav>
+        <h1>git command</h1>
+    </nav>
+    <article>
+        <div id="git_add"></div>
+    </article>
+    <pre>git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -all --abbrev-commit</pre>
+
+    <footer>
+        <a href="https://bramp.github.io/js-sequence-diagrams/">js-sequence-diagrams</a>
+    </footer>
+
+    <script src="js/webfont.js"></script>
+    <script src="js/snap.svg-min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/sequence-diagram-min.js"></script>
+    <script>
+        let src = [];
+        src.push("working area->staging: git add");
+        src.push("Note over working area,staging: git diff");
+        src.push("staging-->>working area: git reset");
+        src.push("staging->commit: git commit");
+        src.push("Note over staging,commit: git diff --staged");
+        src.push("commit-->>working area: git checkout SHA1/tag/branch");
+        let diagram = Diagram.parse(src.join('\n'));
+        diagram.drawSVG("git_add", { theme: 'simple' });
+    </script>
+
+</body>
+
+</html>
