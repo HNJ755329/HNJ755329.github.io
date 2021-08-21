@@ -15,6 +15,7 @@
     <article>
         <div id="git_add"></div>
     </article>
+    <pre>git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -all --abbrev-commit</pre>
 
     <footer>
         <a href="https://bramp.github.io/js-sequence-diagrams/">js-sequence-diagrams</a>
@@ -31,7 +32,7 @@
         src.push("staging->working area: git reset");
         src.push("staging->commit: git commit");
         src.push("staging-->commit: git diff --staged");
-        src.push("commit->working area: git checkout SHA1/tag");
+        src.push("commit->working area: git checkout SHA1/tag/branch");
         let diagram = Diagram.parse(src.join('\n'));
         diagram.drawSVG("git_add", { theme: 'simple' });
     </script>
